@@ -41,14 +41,14 @@ pipeline {
                 docker { image 'centos:3-alpine' }
             }
             steps {
-                sh 'centos --version'
+                sh 'centos --version' }
           
          stage('Redhat')
             agent {
                 docker { image 'redhat:3-alpine' }
             }
             steps {
-                sh 'redhat --version'            
+                sh 'redhat --version'   }         
         }
         }
         
