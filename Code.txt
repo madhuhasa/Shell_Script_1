@@ -31,19 +31,19 @@ pipeline {
           archiveArtifacts "shell_scripts/*.sh"   
          }
          }
-         stage('Final stage'){
+        stage('Final stage'){
             steps {
                 echo "RESULT: ${currentBuild.currentResult}"
             } 
          } 
-         stage('CentOS')
+        stage('CentOS')
             agent {
                 docker { image 'centos:3-alpine' }
             }
             steps {
                 sh 'centos --version' }
           
-         stage('Redhat')
+        stage('Redhat')
             agent {
                 docker { image 'redhat:3-alpine' }
             }
