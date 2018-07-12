@@ -36,8 +36,19 @@ pipeline {
                 echo "RESULT: ${currentBuild.currentResult}"
             } 
          } 
-         
-            
+         stage('CentOS')
+            agent {
+                docker { image 'centos:3-alpine' }
+            }
+            steps {
+                sh 'centos --version'
+          
+         stage('Redhat')
+            agent {
+                docker { image 'redhat:3-alpine' }
+            }
+            steps {
+                sh 'redhat --version'            
         }
         }
         
