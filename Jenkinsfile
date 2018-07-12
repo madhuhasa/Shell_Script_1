@@ -5,7 +5,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t centos:latest .'
+        sh 'docker build -t centos:centos6.6 .'
       }
 }
      stage('Docker Run') {
