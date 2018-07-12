@@ -1,1 +1,1 @@
-from centos:7
+from centos:6
